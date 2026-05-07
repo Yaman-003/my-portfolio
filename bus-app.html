@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bus Case Study</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- FADE ANIMATION -->
+<style>
+  body {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+
+<body class="bg-gray-100">
+
+<!-- NAVBAR -->
+<nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow flex justify-between items-center p-4">
+  <h1 class="font-bold">Case Study</h1>
+  <a href="index.html" class="text-blue-600 font-semibold">Home</a>
+</nav>
+
+<!-- CONTENT -->
+<div class="max-w-4xl mx-auto p-6 bg-white mt-10 rounded-xl shadow">
+
+  <h1 class="text-3xl font-bold">Bus Booking App</h1>
+
+  <img src="./images/multiple-phone-3-screens-mockup.png" class="rounded-lg mt-6">
+
+  <div class="mt-6 space-y-4 text-gray-700">
+
+    <p><strong>Problem:</strong> Users struggled with booking tickets.</p>
+
+    <p><strong>Goal:</strong> Make booking simple and fast.</p>
+
+    <p><strong>Process:</strong> Research → Wireframe → UI → Prototype</p>
+
+    <p><strong>Solution:</strong> Clean step-by-step booking flow.</p>
+
+    <p><strong>Outcome:</strong> Better usability and faster booking.</p>
+
+  </div>
+   <!-- LINK -->
+    <a href="https://dribbble.com/shots/27209359-Bus-ticket-App"
+       class="text-blue-600 font-semibold hover:underline block mt-6">
+      View Final Design →
+    </a>
+
+</div>
+
+<!-- NEXT / PREV -->
+<div class="max-w-4xl mx-auto mt-10  mb-12 flex justify-between">
+
+  <a href="ecommerce.html"
+     class="px-4 py-2 bg-gray-300 rounded-lg hover:bg-gray-400">
+    ← Previous
+  </a>
+
+  <a href="index.html"
+     class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+    Next →
+  </a>
+
+</div>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,27 +7,46 @@
   <title>Yaman Shrestha - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- PAGE FADE ANIMATION -->
   <style>
+    body {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center p-4 bg-white shadow">
-    <img
-      src="https://cdn.prod.website-files.com/65c14454c8e90beca1ee629a/6714b6c7f84bbe3ce6a3762a_Wall%20of%20Portfolios%20Logo.svg"
-      alt="Logo" class="w-36">
-    <ul class="flex gap-6 font-medium">
-      <li class="hover:text-blue-600 cursor-pointer">Portfolio</li>
-      <li class="hover:text-blue-600 cursor-pointer">Case Studies</li>
-    </ul>
-    <button onclick="location.href='#projects'"
-      class=" bg-blue-600 text-white px-3 py-2 rounded hover:bg-gray-500 ">View My Project</button>
+   <nav class="fixed top-0 left-0 w-full z-50 
+            flex justify-between items-center px-6 py-4
+            bg-white shadow-sm border-b">
 
-  </nav>
+  <img
+    src="https://cdn.prod.website-files.com/65c14454c8e90beca1ee629a/6714b6c7f84bbe3ce6a3762a_Wall%20of%20Portfolios%20Logo.svg"
+    alt="Logo"
+    class="w-36"
+  >
+
+  <ul class="flex gap-6 font-medium text-gray-800">
+    <li><a href="#about" class="hover:text-blue-600">About</a></li>
+    <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+    <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+  </ul>
+
+  <button onclick="location.href='#projects'"
+    class="bg-blue-600 text-white px-4 py-2 rounded-lg 
+           hover:bg-blue-500 transition">
+    View Projects
+  </button>
+
+</nav>
   <!-- Hero Section -->
-  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white pt-24">
     <div class="text-center px-4">
       <img src="./images/IMG_3108.png" alt="Yaman Shrestha"
         class="w-32 h-32 mx-auto rounded-full border-4 border-white mb-6 object-cover">
@@ -44,6 +63,16 @@
     <div class="container mx-auto px-6">
       <h3 class="text-3xl font-bold text-center mb-12">Projects</h3>
       <div class="grid md:grid-cols-2  gap-8">
+                <!-- Project Card -->
+        <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+          <img src="./images/iPhone 12 Mockup copy1.png" alt="Bus App" class="w-full h-90 object-cover">
+          <div class="p-6">
+            <h4 class="font-bold text-xl mb-2">Mobile E-commerce App UI Design</h4>
+            <p class="text-gray-600 mb-4">Designed a clean and user-friendly mobile e-commerce app focused on improving the shopping and checkout experience. The goal was to create a smooth user flow from product discovery to order placement with clear visual hierarchy and modern UI design.</p>
+            <a href="ecommerce.html" class="text-blue-600 font-semibold hover:underline">View Case Study</a>
+          </div>
+        </div>
+
         <!-- Project Card -->
         <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
           <img src="./images/multiple-phone-3-screens-mockup.png" alt="Bus App" class="w-full h-90 object-cover">
@@ -51,7 +80,7 @@
             <h4 class="font-bold text-xl mb-2">Bus Booking App (mobile UI)</h4>
             <p class="text-gray-600 mb-4">Mobile app design in Figma for a bus ticket booking system, focusing on
               simplicity, user-friendly navigation, and seat selection flow.</p>
-            <a href="https://dribbble.com/shots/27209359-Bus-ticket-App" class="text-blue-600 font-semibold hover:underline">View Case Study</a>
+            <a href="bus-app.html" class="text-blue-600 font-semibold hover:underline">View Case Study</a>
           </div>
         </div>
                  <!-- Project Card -->
@@ -143,7 +172,7 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16">
+  <section id="about" class=" scroll-mt-24 py-20 bg-white">
     <div class="container mx-auto px-6 md:flex items-center">
       <div class="md:w-1/2 mb-8 md:mb-0">
         <img src="./images/IMG_7087.jpg" alt="Yaman" class="rounded-lg shadow">
@@ -289,7 +318,7 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
     <div class="container mx-auto px-6 text-center">
       <h3 class="text-3xl font-bold mb-6">Get in Touch</h3>
       <p class="text-gray-600 mb-6">Interested in working together? Let’s connect!</p>
-      <a href="uyamanstha123@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">
+      <a href="mailto:uyamanstha123@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">
         Email Me
       </a>
     </div>
