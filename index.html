@@ -22,27 +22,43 @@
 <body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
-   <nav class="fixed top-0 left-0 w-full z-50 
-            flex justify-between items-center px-6 py-4
-            bg-white shadow-sm border-b">
+   <nav class="sticky top-0 z-50 bg-white shadow">
 
-  <img
+  <div class="flex justify-between items-center p-4">
+
+    <!-- Logo -->
+      <img
     src="https://cdn.prod.website-files.com/65c14454c8e90beca1ee629a/6714b6c7f84bbe3ce6a3762a_Wall%20of%20Portfolios%20Logo.svg"
     alt="Logo"
-    class="w-36"
-  >
+    class="w-36">
 
-  <ul class="flex gap-6 font-medium text-gray-800">
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-6 font-medium">
     <li><a href="#about" class="hover:text-blue-600">About</a></li>
     <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
     <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-  </ul>
+    </ul>
 
-  <button onclick="location.href='#projects'"
-    class="bg-blue-600 text-white px-4 py-2 rounded-lg 
-           hover:bg-blue-500 transition">
-    View Projects
-  </button>
+    <!-- Desktop Button (SCROLL BUTTON) -->
+    <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })"
+      class="hidden md:block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+      View My Projects
+    </button>
+
+    <!-- Mobile Button -->
+    <button id="menuBtn" class="md:hidden text-2xl">
+      ☰
+    </button>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
+    <a href="#about" class="block py-2">About</a>
+    <a href="#skills" class="block py-2">Skills</a>
+    <a href="#contact" class="block py-2">Contact</a>
+  </div>
 
 </nav>
   <!-- Hero Section -->
@@ -64,7 +80,7 @@
       <h3 class="text-3xl font-bold text-center mb-12">Projects</h3>
       <div class="grid md:grid-cols-2  gap-8">
                 <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
           <img src="./images/iPhone 12 Mockup copy1.png" alt="Bus App" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Mobile E-commerce App UI Design</h4>
@@ -84,7 +100,7 @@
           </div>
         </div>
                  <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
           <img src="./images/MacBook-Pro-PSD-Mockup copy.png" alt="Bus App" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Admin Dashboard UI-Kit</h4>
@@ -95,7 +111,7 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
         </div>
 
          <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
           <img src="./images/Screenshot 2026-03-25 at 11.50.31.png" alt="Bus App" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Hotel Booking Website UI</h4>
@@ -104,7 +120,7 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
           </div>
         </div>
          <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
           <img src="./images/nepx.png" alt="Bus App" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Nep-X Website Design(Trading Website)-Both Light and Dark UI</h4>
@@ -113,7 +129,7 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
           </div>
         </div>
         <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
           <img src="./images/hospitak website desktop and mobile.png" alt="Hospital Design" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Hospital Desktop Design(Mobile & Desktop)</h4>
@@ -123,7 +139,7 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
           </div>
         </div>
         <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
           <img src="./images/Mockup 3 copy.png" alt="Hospital Design" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Gym website Hero Section(Desktop)</h4>
@@ -134,7 +150,7 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
         </div>
 
         <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
           <img src="./images/Mockup copy.png" alt="Instagram Layout" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Educational Institute Website(Desktop)</h4>
@@ -145,26 +161,25 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
 
         </div>
         <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow hover:shadow-lg overflow-hidden">
-          <div class="bg-white rounded-lg shadow p-4">
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <div class="p-6">
             <img src="images/IMG_6838.jpg" class="rounded mb-3">
             <h4 class="font-bold">Pexel Homepage clone</h4>
             <p class="text-sm text-gray-600">Recreated the pexel homepage using only html and css focusing on responsive
               design and layout accuracy</p>
             <a href="pexel-layout / index.html" class="text-blue-600 font-semibold mt-2 inline-block">View Project</a>
           </div>
-
-
-
+          
         </div>
         <!-- Project Card -->
-        <div class="bg-white rounded-lg shadow p-4">
-          <img src="images/IMG_6840.jpg" class="rounded mb-3">
-          <h4 class="font-bold">Facebook layout clone</h4>
-          <p class="text-sm text-gray-600">Built a facebook style homepage layout ing html and css for better UI
-            practsie</p>
-          <a href="facebook-layout / index.html" target="_blank"
-            class="text-blue-600 font-semibold mt-2 inline-block">View Project</a>
+        <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <div class="p-6">
+            <img src="./images/IMG_6840.jpg" class="rounded mb-3">
+            <h4 class="font-bold">Facebook layout clone</h4>
+            <p class="text-sm text-gray-600">Built a Facebook homepage clone using only HTML and CSS, emphasizing responsive design and layout accuracy</p>
+            <a href="facebook-layout / index.html" class="text-blue-600 font-semibold mt-2 inline-block">View Project</a>
+          </div>
+          
         </div>
 
 
@@ -282,14 +297,14 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
         <!-- Contact Form -->
         <div class="bg-white shadow rounded-lg p-6">
           <h4 class="text-xl font-semibold mb-6">Get In Touch</h4>
-          <form action="#">
-            <input type="text" placeholder="Your Name"
+          <form action="https://formspree.io/f/mbdwkeoz" method="POST">
+            <input type="text" name="name" placeholder="Your Name"
               class="w-full mb-4 p-3 border rounded-lg focus:ring focus:ring-blue-300">
-            <input type="email" placeholder="Your Email"
+            <input type="email" name="email" placeholder="Your Email"
               class="w-full mb-4 p-3 border rounded-lg focus:ring focus:ring-blue-300">
-            <input type="text" placeholder="Subject"
+            <input type="text" name="subject" placeholder="Subject"
               class="w-full mb-4 p-3 border rounded-lg focus:ring focus:ring-blue-300">
-            <textarea rows="4" placeholder="Message"
+            <textarea rows="4" name="message" placeholder="Message"
               class="w-full mb-4 p-3 border rounded-lg focus:ring focus:ring-blue-300"></textarea>
             <button class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">Send Message</button>
           </form>
@@ -363,6 +378,14 @@ Includes analytics charts, sidebar navigation, user profile, and well-organized 
         © 2025 Yaman Shrestha. All rights reserved.
       </div>
     </footer>
+    <script>
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
 
 
 </body>
