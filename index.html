@@ -61,19 +61,69 @@
   </div>
 
 </nav>
-  <!-- Hero Section -->
-  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white pt-24">
-    <div class="text-center px-4">
-      <img src="./images/IMG_3108.png" alt="Yaman Shrestha"
-        class="w-32 h-32 mx-auto rounded-full border-4 border-white mb-6 object-cover">
-      <h2 class="text-4xl font-bold mb-4">Hi, I'm Yaman Shrestha</h2>
-      <p class="text-lg mb-6">A passionate UX/UI designer creating clean, user-friendly apps and websites.</p>
-      <a href="#projects" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-gray-200">
-        View My Work
-      </a>
-    </div>
-  </section>
+<!-- Hero Section -->
+  <section class="pt-32 pb-24 px-6 overflow-hidden relative"
+    style="background: linear-gradient(135deg, #F0EEFB 0%, #FFFFFF 50%, #E6F1FB 100%);">
 
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-12 relative z-10">
+
+      <!-- Left: Photo + Text -->
+      <div class="md:w-1/2 text-center md:text-left">
+        <img src="./images/IMG_3108.png" alt="Yaman Shrestha"
+          class="w-24 h-24 rounded-full border-4 border-white shadow-md object-cover mx-auto md:mx-0 mb-6">
+        <p class="text-gray-500 text-sm mb-3 tracking-wide">UX / UI Designer · Kathmandu</p>
+        <h1 class="text-gray-900 text-4xl md:text-5xl font-semibold mb-4 leading-tight">Yaman Shrestha</h1>
+        <p class="text-gray-600 text-lg mb-8 max-w-md mx-auto md:mx-0">
+          I design products that make complex ideas feel obvious.
+        </p>
+        <a href="#projects"
+          class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+          View my work →
+        </a>
+      </div>
+
+      <!-- Right: Floating placeholder UI cards -->
+      <div class="md:w-1/2 relative h-72 md:h-80">
+
+        <!-- Card 1 -->
+        <div class="absolute top-0 right-4 w-48 md:w-56 rotate-3 shadow-xl rounded-xl bg-white p-2.5 border border-gray-100">
+          <div class="bg-blue-50 rounded-lg p-3">
+            <div class="h-1.5 w-3/5 bg-blue-300 rounded mb-2"></div>
+            <div class="h-7 bg-white rounded mb-1.5"></div>
+            <div class="h-7 bg-white rounded mb-1.5"></div>
+            <div class="h-4 w-1/2 bg-blue-500 rounded"></div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="absolute top-24 left-0 w-40 md:w-48 -rotate-6 shadow-xl rounded-xl bg-white p-2.5 border border-gray-100">
+          <div class="bg-green-50 rounded-lg p-3">
+            <div class="flex items-center gap-1.5 mb-2">
+              <div class="w-4 h-4 rounded-full bg-green-400"></div>
+              <div class="h-1.5 flex-1 bg-green-400 rounded"></div>
+            </div>
+            <div class="h-6 bg-white rounded"></div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="absolute bottom-0 right-16 w-36 md:w-44 rotate-6 shadow-xl rounded-xl bg-white p-2.5 border border-gray-100">
+          <div class="bg-purple-50 rounded-lg p-3">
+            <div class="h-1.5 w-2/5 bg-purple-300 rounded mb-2"></div>
+            <div class="h-1.5 w-4/5 bg-purple-200 rounded mb-3"></div>
+            <div class="h-5 w-3/5 bg-purple-500 rounded"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Soft curve divider into Projects section -->
+    <svg viewBox="0 0 1200 60" class="absolute bottom-0 left-0 w-full" style="height: 40px; display: block;" preserveAspectRatio="none">
+      <path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#f3f4f6"></path>
+    </svg>
+  </section>
   <!-- Projects Section -->
   <section id="projects" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
@@ -82,7 +132,7 @@
 
                         <!-- Project Card -->
         <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-          <img src="./images/Neo bank/Finance Landing Page.png" alt="Bus App" class="w-full h-90 object-cover">
+          <img src="./images/Neo bank/Finance Landing Page.png" alt="Neo Bank fintech landing page" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Neo Bank-Modern Fintech Landing page</h4>
             <p class="text-gray-600 mb-4">Designed a modern fintech landing page focused on trust, clarity, and conversion. The interface helps users explore banking features, pricing plans, financial insights, and customer testimonials through a clean and intuitive experience. The project emphasizes strong visual hierarchy, responsive layouts, and smooth micro-interactions.</p>
@@ -92,7 +142,7 @@
 
                 <!-- Project Card -->
         <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-          <img src="./images/iPhone 12 Mockup copy1.png" alt="Bus App" class="w-full h-90 object-cover">
+          <img src="./images/iPhone 12 Mockup copy1.png" alt="Mobile E-commerce App UI Design" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Mobile E-commerce App UI Design</h4>
             <p class="text-gray-600 mb-4">Designed a clean and user-friendly mobile e-commerce app focused on improving the shopping and checkout experience. The goal was to create a smooth user flow from product discovery to order placement with clear visual hierarchy and modern UI design.</p>
@@ -111,7 +161,7 @@
         </div>
                  <!-- Project Card -->
         <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-          <img src="./images/MacBook-Pro-PSD-Mockup copy.png" alt="Bus App" class="w-full h-90 object-cover">
+          <img src="./images/MacBook-Pro-PSD-Mockup copy.png" alt="Admin Dashboard UI-Kit" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Admin Dashboard UI-Kit</h4>
             <p class="text-gray-600 mb-4">Designed a modern and scalable admin dashboard UI kit focused on data visualization, user management, and clean interface design. The project emphasizes usability, consistency, and efficient navigation for SaaS-based platforms.
@@ -123,7 +173,7 @@
 
          <!-- Project Card -->
         <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-          <img src="./images/Screenshot 2026-03-25 at 11.50.31.png" alt="Bus App" class="w-full h-90 object-cover">
+          <img src="./images/Screenshot 2026-03-25 at 11.50.31.png" alt="Kathmandu Yaman's Hotels & Resorts" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Kathmandu Yaman's Hotels & Resorts</h4>
             <p class="text-gray-600 mb-4">Designed a luxury hotel and resort website focused on premium visual storytelling, elegant layouts, and a smooth hospitality browsing experience.</p>
@@ -132,7 +182,7 @@
         </div>
          <!-- Project Card -->
         <div class="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:-translate-y-2 hover:shadow-2xl">
-          <img src="./images/nepx.png" alt="Bus App" class="w-full h-90 object-cover">
+          <img src="./images/nepx.png" alt="Bus A" class="w-full h-90 object-cover">
           <div class="p-6">
             <h4 class="font-bold text-xl mb-2">Nep-X Website Design(Trading Website)-Both Light and Dark UI</h4>
             <p class="text-gray-600 mb-4">A clean and modern web design created in Figma for the NEPX platform, focusing on intuitive navigation, responsive layouts, and a visually engaging user experience.</p>
@@ -330,8 +380,8 @@
 
           <h4 class="text-lg font-semibold mb-4">Follow Me</h4>
           <div class="flex space-x-4">
-            <a href="#" class="text-gray-500 hover:text-blue-600">🌐</a>
-            <a href="#" class="text-gray-500 hover:text-blue-600">in</a>
+            <a href="https://www.fiverr.com/uyamanhrestha?public_mode=true" class="text-gray-500 hover:text-blue-600">🌐</a>
+            <a href="" class="text-gray-500 hover:text-blue-600">in</a>
             <a href="#" class="text-gray-500 hover:text-blue-600">🐦</a>
             <a href="#" class="text-gray-500 hover:text-blue-600">📸</a>
           </div>
@@ -371,8 +421,7 @@
 
         <!-- Middle: Links -->
         <div class="flex gap-6">
-          <a href="#profile" class="hover:text-blue-400 transition">Profile</a>
-          <a href="#portfolio" class="hover:text-blue-400 transition">Portfolio</a>
+          <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
           <a href="#about" class="hover:text-blue-400 transition">About</a>
           <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
         </div>
